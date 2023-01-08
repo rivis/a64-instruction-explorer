@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: MIT-0 -->
+<html lang="en">
+  <head>
+    <title>A64 Instruction Viewer</title>
+    <script src="a64-instr-view-instrs.js" defer></script>
+    <script src="a64-instr-view.js" defer></script>
+  </head>
+  <body>
+    <form id="instr-form">
+      <datalist id="instr-list"></datalist>
+      <label><u>M</u>nemonic: <input id="instr-input" type="text" size="40" list="instr-list" accesskey="m" placeholder="case-insensitive mnemonic"></label>
+      <button id="instr-show" type="button" accesskey="s" title="Show in this browser tab"><u>S</u>how</button>
+      <button id="instr-open" type="button" accesskey="o" title="Open in a new browser tab"><u>O</u>pen</button>
+      <span> - </span>
+      <label><input id="instr-base" type="checkbox" checked>Base</label>
+      <label><input id="instr-simdfp" type="checkbox" checked>SIMD&FP</label>
+      <label><input id="instr-sve" type="checkbox" checked>SVE</label>
+      <label><input id="instr-sme" type="checkbox" checked>SME</label>
+    </form>
+    <div>
+      <iframe id="instr-iframe" style="width: 100%" accesskey="c"></iframe>
+    </div>
+  </body>
+</html>
